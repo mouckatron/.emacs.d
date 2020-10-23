@@ -38,6 +38,7 @@
 
 ;; modes
 ;(load-library "flycheck")
+(load-library "ansiterm")
 (load-library "git")
 (load-library "terraform")
 (load-library "typescript")
