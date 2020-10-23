@@ -3,6 +3,10 @@
 
 ;;; Code:
 
+(if (eq system-type 'gnu/linux)
+    (package-initialize)
+    (print "nope"))
+
 ;; Set path to dependencies
 (setq settings-dir
       (expand-file-name "settings" user-emacs-directory))

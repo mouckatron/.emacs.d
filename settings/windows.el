@@ -8,6 +8,6 @@
 (split-window-below)
 (enlarge-window 12)
 (other-window 1)
-(ansi-term "/bin/zsh")
+(ansi-term "/bin/bash")
 
 ;;; windows.el ends here
