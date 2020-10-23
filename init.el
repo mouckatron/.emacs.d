@@ -3,14 +3,6 @@
 
 ;;; Code:
 
-(package-initialize)
-
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-
-(setq inhibit-startup-message t)
-
 ;; Set path to dependencies
 (setq settings-dir
       (expand-file-name "settings" user-emacs-directory))
@@ -29,13 +21,6 @@
 (require 'setup-package)
 (load-library "packages")
 
-;; settings
-(load-library "keys")
-(load-library "editing")
-(load-library "theme")
-(load-library "windows")
-
-
 ;; modes
 ;(load-library "flycheck")
 (load-library "ansiterm")
@@ -43,5 +28,13 @@
 (load-library "terraform")
 (load-library "typescript")
 (load-library "web-mode")
+
+;; settings
+(load-library "ui")
+(load-library "keys")
+(load-library "editing")
+(load-library "theme")
+(load-library "windows")
+
 
 ;;; init.el ends here
