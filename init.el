@@ -29,6 +29,7 @@
 ;(load-library "flycheck")
 (load-library "ansiterm")
 (load-library "git")
+(load-library "golang")
 (load-library "terraform")
 (load-library "typescript")
 (load-library "web-mode")

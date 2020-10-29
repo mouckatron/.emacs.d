@@ -3,6 +3,7 @@
 (defun init--install-packages ()
   (packages-install
    '(ansible
+     auto-complete
      company
      company-terraform
      dockerfile-mode
@@ -12,6 +13,8 @@
      flycheck
      flymd
      git-gutter
+     go-autocomplete
+     go-mode
      groovy-mode
      helm
      helm-git
