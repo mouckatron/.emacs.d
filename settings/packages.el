@@ -27,6 +27,7 @@
      markdown-preview-eww
      python-mode
      solarized-theme
+     systemd
      terraform-mode
      tide
      treemacs
