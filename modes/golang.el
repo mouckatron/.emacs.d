@@ -5,6 +5,7 @@
 
 
 (add-to-list 'exec-path "/opt/go/bin")
+(add-to-list 'exec-path "~/golang/bin")
 (add-hook 'go-mode-hook
           (lambda ()
             (add-hook 'before-save-hook 'gofmt-before-save)
