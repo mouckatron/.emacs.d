@@ -44,3 +44,5 @@
     (setq company-dabbrev-downcase nil)))
 
 (setup-company-mode)
+
+(provide 'company)

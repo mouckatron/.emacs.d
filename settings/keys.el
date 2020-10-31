@@ -5,3 +5,5 @@
 (fset 'up-recentre
       "\C-p\C-l")
 (global-set-key (kbd "M-p") 'up-recentre)
+
+(provide 'keys)

@@ -10,4 +10,5 @@
 (other-window 1)
 (ansi-term "/bin/bash")
 
+(provide 'windows)
 ;;; windows.el ends here

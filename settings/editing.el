@@ -6,3 +6,5 @@
                               (delete-trailing-whitespace)))
 
 (global-hl-line-mode 1)
+
+(provide 'editing)

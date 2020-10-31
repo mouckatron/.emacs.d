@@ -23,23 +23,22 @@
 
 ;; Setup packages
 (require 'setup-package)
-(load-library "packages")
+(require 'packages)
 
 ;; modes
-;(load-library "flycheck")
-(load-library "ansiterm")
-(load-library "git")
-(load-library "golang")
-(load-library "terraform")
-(load-library "typescript")
-(load-library "web-mode")
+;(require "flycheck")
+(require 'ansiterm)
+(require 'git)
+(require 'golang)
+(require 'terraform)
+(require 'typescript)
+(require 'web-mode)
 
 ;; settings
-(load-library "ui")
-(load-library "keys")
-(load-library "editing")
-(load-library "theme")
-(load-library "windows")
-
+(require 'ui)
+(require 'keys)
+(require 'editing)
+(require 'theme)
+(require 'windows)
 
 ;;; init.el ends here

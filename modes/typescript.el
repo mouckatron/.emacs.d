@@ -30,3 +30,5 @@
 
 (add-hook 'typescript-mode-hook 'setup-tide-mode)
 (add-hook 'typescript-mode-hook 'zdx/use-prettier-if-in-node-modules)
+
+(provide 'typescript)

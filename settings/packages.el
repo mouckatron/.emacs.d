@@ -1,10 +1,10 @@
 ;;; package --- install required packages
 
-(defun init--install-packages ()
+(defun -install-packages ()
   (packages-install
    '(ansible
-     auto-complete
      company
+     company-lsp
      company-terraform
      dockerfile-mode
      dumb-jump
@@ -13,7 +13,6 @@
      flycheck
      flymd
      git-gutter
-     go-autocomplete
      go-mode
      groovy-mode
      helm
@@ -21,6 +20,8 @@
      helm-projectile
      jinja2-mode
      json-mode
+     lsp-mode
+     lsp-ui
      magit
      markdown-mode
      markdown-mode+
@@ -38,7 +39,9 @@
      )))
 
 (condition-case nil
-    (init--install-packages)
+    (-install-packages)
   (error
    (package-refresh-contents)
-   (init--install-packages)))
+   (-install-packages)))
+
+(provide 'packages)

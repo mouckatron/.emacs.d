@@ -12,3 +12,5 @@
 
 ;; remove fringes from the sides
 (fringe-mode 0)
+
+(provide 'ui)
