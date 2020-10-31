@@ -3,9 +3,7 @@
 ;;; go get github.com/rogpeppe/godef
 ;;; go get -u github.com/nsf/gocode
 ;;; go get golang.org/x/tools/cmd/goimports
-;;; go get golang.org/x/tools/cmd/oracle
-
-
+;;; go get -u golang.org/x/lint/golint
 ;;; go get golang.org/x/tools/gopls@latest
 
 (setq lsp-gopls-staticcheck t)
@@ -76,8 +74,9 @@
 :ensure t
 :mode ("\\.go\\'" . go-mode)
 :init
-(setq compilation-environment (format "PATH=%s" (mapconcat 'identity exec-path ":")))
-(setq compile-command "echo $PATH && echo Building... && go build -v && echo Testing... && go test -v && echo Linter... && golint")
+(setq compilation-environment (list
+                               (format "PATH=%s" (mapconcat 'identity exec-path ":"))))
+(setq compile-command "echo Building... && go build -v && echo Testing... && go test -v && echo Linter... && golint")
 (setq compilation-read-command nil)
 (add-hook 'go-mode-hook 'custom-go-mode)
 :bind (("M-," . compile)
