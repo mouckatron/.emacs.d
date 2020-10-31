@@ -35,6 +35,7 @@
 (require 'web-mode)
 
 ;; settings
+(require 'environment)
 (require 'ui)
 (require 'keys)
 (require 'editing)

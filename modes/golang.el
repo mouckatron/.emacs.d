@@ -26,7 +26,11 @@
 (defun lsp-go-install-save-hooks ()
   (add-hook 'before-save-hook #'lsp-format-buffer t t)
   (add-hook 'before-save-hook #'lsp-organize-imports t t))
-(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+                                        ;(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+(defun old-school-save-hooks ()
+  (setq gofmt-command "goimports")
+  (add-hook 'before-save-hook 'gofmt-before-save))
+(add-hook 'go-mode-hook 'old-school-save-hooks)
 
 ;;Optional - provides fancier overlays.
 
@@ -72,7 +76,8 @@
 :ensure t
 :mode ("\\.go\\'" . go-mode)
 :init
-(setq compile-command "echo Building... && go build -v && echo Testing... && go test -v && echo Linter... && golint")
+(setq compilation-environment (format "PATH=%s" (mapconcat 'identity exec-path ":")))
+(setq compile-command "echo $PATH && echo Building... && go build -v && echo Testing... && go test -v && echo Linter... && golint")
 (setq compilation-read-command nil)
 (add-hook 'go-mode-hook 'custom-go-mode)
 :bind (("M-," . compile)
