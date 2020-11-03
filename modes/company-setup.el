@@ -45,4 +45,4 @@
 
 (setup-company-mode)
 
-(provide 'company)
+(provide 'company-setup)

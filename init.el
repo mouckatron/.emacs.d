@@ -27,6 +27,7 @@
 
 ;; modes
 ;(require "flycheck")
+(require 'company-setup)
 (require 'ansiterm)
 (require 'git)
 (require 'golang)
