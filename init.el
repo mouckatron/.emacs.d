@@ -33,7 +33,7 @@
 (require 'golang)
 (require 'terraform)
 (require 'typescript)
-(require 'web-mode)
+(require 'web-mode-setup)
 
 ;; settings
 (require 'environment)

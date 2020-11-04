@@ -24,5 +24,5 @@
                 ("django" . "\\.jhtml\\'"))
           )
 
-(provide 'web-mode)
+(provide 'web-mode-setup)
 ;;; web-mode.el ends here
